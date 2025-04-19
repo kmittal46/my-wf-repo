@@ -85,12 +85,13 @@ zcat SRR15242907_2.fastq.gz | head -n 4000 > mini_R2.fastq
 # Compress for use
 gzip mini_R1.fastq
 gzip mini_R2.fastq
+```
 
-#These files are located in:
-#data/mini_R1.fastq.gz
-#data/mini_R2.fastq.gz
+These files are located in:
+- `data/mini_R1.fastq.gz`
+- `data/mini_R2.fastq.gz`
 
-
+```bash
 #Setup environment
 conda create -n nf -c bioconda nextflow -y
 conda activate nf
@@ -107,9 +108,9 @@ nextflow run . \
 This will use Conda to install dependencies (fastp, skesa, seqkit), and run the workflow with mini test FASTQ files
 
 Generate: 
--flowchart.png: Workflow DAG (flowchart), 
--report.html: Execution summary and resources, 
--timeline.html: Timeline of each step
+- flowchart.png: Workflow DAG (flowchart) 
+- report.html: Execution summary and resources 
+- timeline.html: Timeline of each step
 
 Output Files: All result files are organized into:
 - `results/fastp/` → trimmed reads  
