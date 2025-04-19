@@ -73,7 +73,7 @@ The original dataset was obtained from [NCBI SRA](https://www.ncbi.nlm.nih.gov/s
 
 ---
 
-### 🧩 How to Run
+## 🧩 How to Run
 
 To reduce the workflow runtime and ensure GitHub compliance (<100 MB limit), smaller versions of the FASTQ files were created:
 
