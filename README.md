@@ -1,9 +1,9 @@
-# my-wf-repo  
-### BIOL7210 Workflow Assignment – Nextflow Genomics Pipeline
+# 🧬 my-wf-repo  
+### 📁 BIOL7210 Workflow Assignment – Nextflow Genomics Pipeline 
 
 ---
 
-## Overview
+##  📖 Overview
 
 This repository contains a modular, reproducible workflow built using **Nextflow DSL2** for performing:
 
@@ -15,11 +15,11 @@ The pipeline demonstrates both **sequential** and **parallel execution** using i
 
 ---
 
-## Nextflow Version
+## 🧪 Nextflow Version
 
 Tested on: **v24.10.5**
 
-## Operating System
+## 💻 Operating System
 
 Compatible with:
 - macOS (Apple Silicon and Intel)
@@ -28,7 +28,7 @@ Compatible with:
 
 ---
 
-## Workflow Description
+## 🧭 Workflow Description
 
 The pipeline contains **three modules**, connected by input/output channels:
 
@@ -52,9 +52,9 @@ The pipeline contains **three modules**, connected by input/output channels:
 
 ---
 
-## Test Data
+## 🧬 Test Data
 
-### SRA Source:
+### 🔗 SRA Source:
 The original dataset was obtained from [NCBI SRA](https://www.ncbi.nlm.nih.gov/sra?term=SRR15242907), a **public paired-end Illumina run**:
 
 - **Accession ID**: `SRR15242907`
@@ -65,7 +65,7 @@ The original dataset was obtained from [NCBI SRA](https://www.ncbi.nlm.nih.gov/s
 
 ---
 
-### Mini Dataset for Testing
+### 🧩 How to Run
 
 To reduce the workflow runtime and ensure GitHub compliance (<100 MB limit), smaller versions of the FASTQ files were created:
 
@@ -78,30 +78,29 @@ zcat SRR15242907_2.fastq.gz | head -n 4000 > mini_R2.fastq
 gzip mini_R1.fastq
 gzip mini_R2.fastq
 
-These files are located in:
-data/mini_R1.fastq.gz
-data/mini_R2.fastq.gz
+#These files are located in:
+#data/mini_R1.fastq.gz
+#data/mini_R2.fastq.gz
 
-## How to Run
 
-```bash
 #Setup environment
 conda create -n nf -c bioconda nextflow -y
 conda activate nf
 
+#Main command to run
 #Install graphviz for generating the flowchart.png
 nextflow run . \                                                            
   -profile test,conda \
   -with-dag       flowchart.png \
   -with-report    report.html \
   -with-timeline  timeline.html
+
 #This will: Use Conda to install dependencies (fastp, skesa, seqkit), and run the workflow with mini test FASTQ files
 #Generate: flowchart.png: Workflow DAG (flowchart), report.html: Execution summary and resources, timeline.html: Timeline of each step
 
-## Output Files:
-All result files are organized into:
-results/fastp/ → trimmed reads
-results/skesa/ → assembly output
-results/seqkit/ → read quality summary
+## Output Files: All result files are organized into:
+# `results/fastp/` → trimmed reads  
+# `results/skesa/` → assembly output  
+# `results/seqkit/` → read quality summary
 
 
