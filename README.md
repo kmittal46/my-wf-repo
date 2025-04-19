@@ -102,13 +102,18 @@ nextflow run . \
   -with-dag       flowchart.png \
   -with-report    report.html \
   -with-timeline  timeline.html
+```
 
-#This will: Use Conda to install dependencies (fastp, skesa, seqkit), and run the workflow with mini test FASTQ files
-#Generate: flowchart.png: Workflow DAG (flowchart), report.html: Execution summary and resources, timeline.html: Timeline of each step
+This will use Conda to install dependencies (fastp, skesa, seqkit), and run the workflow with mini test FASTQ files
 
-## Output Files: All result files are organized into:
-# `results/fastp/` → trimmed reads  
-# `results/skesa/` → assembly output  
-# `results/seqkit/` → read quality summary
+Generate: 
+-flowchart.png: Workflow DAG (flowchart), 
+-report.html: Execution summary and resources, 
+-timeline.html: Timeline of each step
+
+Output Files: All result files are organized into:
+- `results/fastp/` → trimmed reads  
+- `results/skesa/` → assembly output  
+- `results/seqkit/` → read quality summary
 
 
