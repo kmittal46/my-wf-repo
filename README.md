@@ -52,6 +52,14 @@ The pipeline contains **three modules**, connected by input/output channels:
 
 ---
 
+## 🖼️ Workflow DAG
+
+The following DAG (Directed Acyclic Graph) illustrates the data flow:
+
+![Workflow DAG](flowchart.png)
+
+---
+
 ## 🧬 Test Data
 
 ### 🔗 SRA Source:
