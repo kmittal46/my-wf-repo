@@ -1,0 +1,6 @@
+name: spades
+channels:
+  - bioconda
+dependencies:
+  - spades
+

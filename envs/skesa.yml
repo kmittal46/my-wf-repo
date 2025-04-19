@@ -1,0 +1,10 @@
+name: skesa
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+  - r
+subdir: osx-64
+dependencies:
+  - skesa
+

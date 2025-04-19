@@ -1,0 +1,3 @@
+file                format  type  num_seqs    sum_len  min_len  avg_len  max_len
+trimmed_1.fastq.gz  FASTQ   DNA      4,379  1,316,125      139    300.6      301
+trimmed_2.fastq.gz  FASTQ   DNA      4,379  1,316,238      139    300.6      301
