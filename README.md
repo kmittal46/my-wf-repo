@@ -20,8 +20,11 @@ Test FASTQ files used:
 ```bash
 conda create -n nf -c bioconda nextflow -y
 conda activate nf
-nextflow run main.nf -profile test,conda
-nextflow run main.nf -profile test,conda -with-timeline timeline.html -resume
-# Install graphviz
-nextflow run main.nf -profile test,conda -with-dag workflow.dot -resume
-dot -Tpng workflow.dot -o workflow.png
+
+#Install graphviz for generating the flowchart.png
+
+nextflow run . \                                                            
+  -profile test,conda \
+  -with-dag       flowchart.png \
+  -with-report    report.html \
+  -with-timeline  timeline.html
